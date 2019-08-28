@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - /home/emwp/Docker/pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  api:
+    image: nestjs-graphql-api
+    depends_on:
+      - db
+    ports:
+      - '4000:4000'
