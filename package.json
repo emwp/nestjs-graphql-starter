@@ -1,8 +1,8 @@
 {
   "name": "nestjs-graphql-starter",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "NestJS/GraphQL/TypeORM/Postgres/Docker Starter",
+  "author": "Everton Pereira <everton.mwp@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
